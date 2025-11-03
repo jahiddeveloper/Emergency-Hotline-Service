@@ -56,3 +56,23 @@ for (let callBtn of callBtns) {
     cartContainer.append(newCart);
   });
 }
+
+// copy btn
+
+let copyBtns = document.getElementsByClassName("copy-btn");
+
+for (let copyBtn of copyBtns) {
+  copyBtn.addEventListener("click", function () {
+
+    let cartHotline = copyBtn.parentNode.children[3];
+      console.log(cartHotline.innerText)
+
+    navigator.clipboard.writeText(cartHotline.innerText);
+
+    let copyCount = parseInt(document.getElementById("copy-count").innerText);
+
+    let currentCopy = copyCount + 1;
+
+    document.getElementById("copy-count").innerText = currentCopy;
+  });
+}
