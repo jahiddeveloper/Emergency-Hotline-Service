@@ -76,3 +76,17 @@ for (let copyBtn of copyBtns) {
     document.getElementById("copy-count").innerText = currentCopy;
   });
 }
+
+// Cleat btn
+
+document.getElementById("clear-btn")
+.addEventListener('click', function() {
+    
+    if (confirm("Do you want to proceed?")) {
+        document.getElementById("cart-container").innerText = "";
+        return;
+} else {
+    return;
+}
+
+})
